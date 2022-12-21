@@ -29,7 +29,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/homepage', function(){
-    return view('mogrammer.index');
+    return view('frontend.landing');
 });
 Route::get('/pricing', function(){
     return view('frontend.pricing');
@@ -40,6 +40,9 @@ Route::get('/webdev', function(){
 });
 Route::get('/forum', function(){
     return view('frontend.forum');
+});
+Route::get('/kuis', function(){
+    return view('frontend.kuis');
 });
 
 require __DIR__.'/auth.php';

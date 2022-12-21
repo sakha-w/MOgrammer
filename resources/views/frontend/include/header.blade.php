@@ -3,10 +3,10 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
           <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-              <li class="nav-item px-2"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="pricing.html">Pricing</a></li>
-              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="web-development.html">Web Development</a></li>
-              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="user-research.html">User Research</a></li>
+              <li class="nav-item px-2"><a class="nav-link active" aria-current="page" href="homepage">Beranda</a></li>
+              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="pricing">Tutorial</a></li>
+              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="forum">Forum</a></li>
+              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="kuis">Kuis</a></li>
             </ul><a class="btn btn-primary order-1 order-lg-0" href="#!">Sign Up</a>
             <form class="d-flex my-3 d-block d-lg-none">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
