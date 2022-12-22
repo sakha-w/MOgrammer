@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ForumController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +32,7 @@ Route::middleware('auth')->group(function () {
 Route::get('/homepage', function(){
     return view('frontend.landing');
 });
+
 Route::get('/pricing', function(){
     return view('frontend.pricing');
 });

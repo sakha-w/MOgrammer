@@ -4,7 +4,7 @@ http_request = new XMLHttpRequest();
 
 function LoadData(){
 $.ajax({
-url: 'view.php',
+url: '{{route("viewComment")}}',
 type: "POST",
 dataType: 'json',
 success: function(data) {

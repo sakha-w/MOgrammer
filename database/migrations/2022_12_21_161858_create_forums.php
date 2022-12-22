@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('forums', function (Blueprint $table) {
             $table->id();
-            $table->string('parent_comment');
+            $table->string('parent_comment', 500)->default("");
+            $table->string('name');
             $table->string('post');
             $table->timestamp('date');
             $table->timestamps();

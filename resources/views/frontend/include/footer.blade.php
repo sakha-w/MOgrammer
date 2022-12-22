@@ -3,9 +3,9 @@
         <div class="container">
           <div class="row">
             <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0"><a class="text-decoration-none" href="#"><img src="{{ asset('assets/img/gallery/footer-logo.png')}}" height="51" alt="" /></a>
-              <p class="text-light my-4"> <i class="fas fa-map-marker-alt me-3"></i><span class="text-light">1500 Treat Ave, Suite 200  &nbsp;</span><a class="text-light" href="tel:+604-680-9785">+604-680-9785</a><br />San Francisco, CA 94110</p>
-              <p class="text-light"> <i class="fas fa-envelope me-3"> </i><a class="text-light" href="mailto:vctung@outlook.com">vctung@outlook.com </a></p>
-              <p class="text-light"> <i class="fas fa-phone-alt me-3"></i><a class="text-light" href="tel:1-800-800-2299">1-800-800-2299 (Support)</a></p>
+              <p class="text-light my-4"> <i class="fas fa-map-marker-alt me-3"></i><span class="text-light">Jalan Babakan Ciamis No. 82B &nbsp;</span><a class="text-light" href="tel:+62812-6555-9397">+62812-6555-9397</a><br />Kab. Bandung</p>
+              <p class="text-light"> <i class="fas fa-envelope me-3"> </i><a class="text-light" href="mogrammer@gmail">mogrammer@gmail.com </a></p>
+              <p class="text-light"> <i class="fas fa-phone-alt me-3"></i><a class="text-light" href="tel:0852-7405-0353">0852-7405-0353 (Support)</a></p>
             </div>
             <div class="col-6 col-sm-4 col-lg-2 mb-3 order-2 order-sm-1">
               <h5 class="lh-lg fw-bold mb-4 text-light font-sans-serif">Community </h5>

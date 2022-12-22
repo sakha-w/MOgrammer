@@ -11,7 +11,7 @@ class Forum extends Model
 
     protected $fillable = [
         'parent_comment',
-        'student',
+        'name',
         'post',
         'date',
     ];
