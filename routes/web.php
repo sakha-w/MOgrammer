@@ -47,4 +47,4 @@ Route::get('/kuis', function(){
     return view('frontend.kuis');
 });
 
-require __DIR__.'/auth.php';
+// require __DIR__.'/auth.php';

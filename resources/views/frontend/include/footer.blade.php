@@ -2,7 +2,7 @@
 
         <div class="container">
           <div class="row">
-            <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0"><a class="text-decoration-none" href="#"><img src="{{ asset('assets/img/gallery/footer-logo.png')}}" height="51" alt="" /></a>
+            <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0"><a class="text-decoration-none" href="#"></a>
               <p class="text-light my-4"> <i class="fas fa-map-marker-alt me-3"></i><span class="text-light">Jalan Babakan Ciamis No. 82B &nbsp;</span><a class="text-light" href="tel:+62812-6555-9397">+62812-6555-9397</a><br />Kab. Bandung</p>
               <p class="text-light"> <i class="fas fa-envelope me-3"> </i><a class="text-light" href="mogrammer@gmail">mogrammer@gmail.com </a></p>
               <p class="text-light"> <i class="fas fa-phone-alt me-3"></i><a class="text-light" href="tel:0852-7405-0353">0852-7405-0353 (Support)</a></p>
