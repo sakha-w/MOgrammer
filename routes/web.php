@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,12 +17,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/landing', function () {
+    return view('home');
+})->middleware(['auth', 'verified'])->name('landing');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -33,8 +34,17 @@ Route::get('/homepage', function(){
     return view('frontend.landing');
 });
 
-Route::get('/pricing', function(){
-    return view('frontend.pricing');
+Route::get('/tutorialJava', function(){
+    return view('tutorial.java');
+});
+Route::get('/tutorialJavaScript', function(){
+    return view('tutorial.javascript');
+});
+Route::get('/tutorialCss', function(){
+    return view('tutorial.css');
+});
+Route::get('/tutorialPhp', function(){
+    return view('tutorial.php');
 });
 
 Route::get('/webdev', function(){
@@ -48,3 +58,8 @@ Route::get('/kuis', function(){
 });
 
 // require __DIR__.'/auth.php';
+
+Auth::routes();
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

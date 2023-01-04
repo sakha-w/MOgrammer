@@ -7,7 +7,25 @@
               <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="pricing">Tutorial</a></li>
               <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="forum">Forum</a></li>
               <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="kuis">Kuis</a></li>
-            </ul><a class="btn btn-primary order-1 order-lg-0" href="#!">Sign Up</a>
+            </ul>
+            @if(!Auth::check())
+              <a class="btn btn-primary order-1 order-lg-0" href="{{route('register')}}">Sign Up</a>
+            @else
+            
+            <div class="dropdown">
+              <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="card-img-top" style="width: 40px;" src="{{ asset('assets/img/gallery/profile.png')}}" alt="courses" />  
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <form action="{{route('logout')}}" method="post">
+                    @csrf
+                    <button type="submit" class="btn ">Logout</button>
+                  </form>
+                </li>
+              </ul>
+            </div>
+            @endif
             <form class="d-flex my-3 d-block d-lg-none">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
               <button class="btn btn-outline-primary" type="submit">Search</button>
