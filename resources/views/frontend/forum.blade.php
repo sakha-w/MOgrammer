@@ -49,33 +49,33 @@
 
 
       @include('frontend.include.header')
-      <div id="ReplyModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+      <div id="ReplyModal" class="modal fade" role="dialog" tabindex="-1">
+        <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Reply Question</h4>
-      </div>
-      <div class="modal-body">
-        <form name="frm1" method="post">
-            <input type="hidden" id="commentid" name="Rcommentid">
-        	<div class="form-group">
-        	  <label for="usr">Write your name:</label>
-        	  <input type="text" class="form-control" name="Rname" required>
-        	</div>
-            <div class="form-group">
-              <label for="comment">Write your reply:</label>
-              <textarea class="form-control" rows="5" name="Rmsg" required></textarea>
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Reply Question</h4>
             </div>
-        	 <input type="button" id="btnreply" name="btnreply" class="btn btn-primary" value="Reply">
-      </form>
-      </div>
-    </div>
+            <div class="modal-body">
+              <form name="frm1" method="post">
+                  <input type="hidden" id="commentid" name="Rcommentid">
+                <div class="form-group">
+                  <label for="usr">Write your name:</label>
+                  <input type="text" class="form-control" name="Rname" required>
+                </div>
+                  <div class="form-group my-3">
+                    <label for="comment">Write your reply:</label>
+                    <textarea class="form-control" rows="5" name="Rmsg" required></textarea>
+                  </div>
+                <input type="button" id="btnreply" name="btnreply" class="btn btn-primary" value="Reply">
+            </form>
+            </div>
+          </div>
 
-  </div>
-</div>
+        </div>
+      </div>
 
 <div class="container">
 
@@ -89,7 +89,7 @@
 	  <label for="usr">Write your name:</label>
 	  <input type="text" class="form-control" name="name" required>
 	</div>
-    <div class="form-group">
+    <div class="form-group my-3">
       <label for="comment">Write your question:</label>
       <textarea class="form-control" rows="5" name="msg" required></textarea>
     </div>
@@ -114,17 +114,9 @@
 
 
 
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
       @include('frontend.include.footer')
     </main>
-    <!-- ===============================================-->
-    <!--    End of Main Content-->
-    <!-- ===============================================-->
-
-
-
+    
 
     <!-- ===============================================-->
     <!--    JavaScripts-->
@@ -151,13 +143,13 @@
           for (var i=0; i<data.length; i++) {
               var commentId = data[i].id;
               if(data[i].parent_comment == 0){
-              var row = $('<tr><td><b><img src="avatar.jpg" width="30px" height="30px" />' + data[i].name + ' :<i> '+ data[i].date + ':</i></b></br><p style="padding-left:80px">' + data[i].post + '</br><a data-toggle="modal" data-id="'+ commentId +'" title="Add this item" class="open-ReplyModal" href="#ReplyModal">Reply</a>'+'</p></td></tr>');
+              var row = $('<tr><td><b><img src=" ' + '{{ asset("assets/img/avatar.png")}}' + '" width="25px" height="30px" />' + data[i].name + ' :<i> '+ data[i].date + ':</i></b></br><p style="padding-left:80px">' + data[i].post + '</br><a data-bs-toggle="modal" data-bs-target="#ReplyModal" data-id="'+ commentId +'" title="Add this item" class="open-ReplyModal" href="#ReplyModal">Reply</a>'+'</p></td></tr>');
               $('#record').append(row);
               for (var r = 0; (r < data.length); r++)
                       {
                           if ( data[r].parent_comment == commentId)
                           {
-                              var comments = $('<tr><td style="padding-left:80px"><b><img src="avatar.jpg" width="30px" height="30px" />' + data[r].name + ' :<i> ' + data[r].date + ':</i></b></br><p style="padding-left:40px">'+ data[r].post +'</p></td></tr>');
+                              var comments = $('<tr><td style="padding-left:80px"><b><img src="{{ asset("assets/img/avatar.png")}}" width="25px" height="30px" />' + data[r].name + ' :<i> ' + data[r].date + ':</i></b></br><p style="padding-left:40px">'+ data[r].post +'</p></td></tr>');
                               $('#record').append(comments);
                           }
                       }
@@ -173,6 +165,7 @@
 
 
       $(document).on("click", ".open-ReplyModal", function () {
+        console.log('asddas');
           var commentid = $(this).data('id');
           $(".modal-body #commentid").val( commentid );
       });
@@ -217,10 +210,7 @@
             alert('Please fill all the field !');
           }
         });
-      });
 
-      //Reply comment
-      $(document).ready(function() {
         $('#btnreply').on('click', function() {
           $("#btnreply").attr("disabled", "disabled");
           var id = document.forms["frm1"]["Rcommentid"].value;
@@ -257,6 +247,11 @@
             alert('Please fill all the field !');
           }
         });
+      });
+
+      //Reply comment
+      $(document).ready(function() {
+
       });
 
 

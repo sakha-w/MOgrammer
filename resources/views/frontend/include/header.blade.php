@@ -9,7 +9,7 @@
               <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="kuis">Kuis</a></li>
             </ul>
             @if(!Auth::check())
-              <a class="btn btn-primary order-1 order-lg-0" href="{{route('register')}}">Sign Up</a>
+              <a class="btn btn-primary order-1 order-lg-0" href="{{route('register')}}">Daftar</a>
             @else
             
             <div class="dropdown">
@@ -21,7 +21,7 @@
                   <form action="{{route('logout')}}" method="post">
                     @csrf
                     <button type="submit" class="btn ">Logout</button>
-                  </form>
+                  </form> 
                 </li>
               </ul>
             </div>
