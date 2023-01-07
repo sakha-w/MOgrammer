@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -32,11 +33,24 @@ Route::get('/landing', function () {
 
 Route::get('/homepage', function(){
     return view('frontend.landing');
+})->name('homepage');
+
+Route::get('/tutorial', function(){
+    return view('frontend.tutorial');
 });
 
 Route::get('/tutorialJava', function(){
     return view('tutorial.java');
 });
+
+Route::get('/html', function(){
+    return view('tutorial.html');
+});
+
+Route::get('/python', function(){
+    return view('tutorial.python');
+});
+
 Route::get('/tutorialJavaScript', function(){
     return view('tutorial.javascript');
 });
@@ -56,6 +70,9 @@ Route::get('/forum', function(){
 Route::get('/kuis', function(){
     return view('frontend.kuis');
 });
+
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 // require __DIR__.'/auth.php';
 
