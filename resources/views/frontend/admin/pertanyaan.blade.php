@@ -1,0 +1,1 @@
+pertanyaan dulu bos

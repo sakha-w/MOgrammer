@@ -71,10 +71,32 @@ Route::get('/kuis', function(){
     return view('frontend.kuis');
 });
 
+//admin
+Route::get('/userDashboard', function(){
+    return view('frontend.admin.user');
+})->name('userDashboard');
+
+Route::get('/kategoriDashboard', function(){
+    return view('frontend.admin.kategori');
+})->name('kategoriDashboard');
+
+Route::get('/pertanyaanDashboard', function(){
+    return view('frontend.admin.pertanyaan');
+})->name('pertanyaanDashboard');
+
+Route::get('/pertanyaanDashboard', function(){
+    return view('frontend.admin.pertanyaan');
+})->name('pertanyaanDashboard');
+
+Route::get('/homepageDashboard', function(){
+    return view('frontend.admin.dashboard');
+})->name('homepageDashboard');
+
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 // require __DIR__.'/auth.php';
+
 
 Auth::routes();
 
