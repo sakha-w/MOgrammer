@@ -32,20 +32,20 @@ Route::get('/tutorial', function(){
     return view('frontend.tutorial');
 });
 
-Route::get('/tutorialJava', function(){
-    return view('tutorial.java');
+Route::get('/java', function(){
+    return view('frontend.tutorial.java');
 });
 
-Route::get('/tutorialJavaScript', function(){
-    return view('tutorial.javascript');
+Route::get('/javascript', function(){
+    return view('frontend.tutorial.javascript');
 });
 
-Route::get('/tutorialCss', function(){
-    return view('tutorial.css');
+Route::get('/css', function(){
+    return view('frontend.tutorial.css');
 });
 
-Route::get('/tutorialPhp', function(){
-    return view('tutorial.php');
+Route::get('/php', function(){
+    return view('frontend.tutorial.php');
 });
 
 Route::middleware('auth')->group(function () {
@@ -56,16 +56,16 @@ Route::middleware('auth')->group(function () {
 Route::get('/kuis/{category}', [KuisController::class, 'getQuestionsByCategory']);
 
 
-Route::get('/webdev', function(){
-    return view('frontend.webdev');
-});
-
 Route::get('/forum', function(){
     return view('frontend.forum');
 });
 
 Route::get('/kuis', function(){
     return view('frontend.kuis');
+});
+
+Route::get('/tableUser', function(){
+    return view('frontend.admin.user');
 });
 
 Auth::routes();

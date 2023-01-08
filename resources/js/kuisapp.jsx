@@ -15,32 +15,25 @@ function KuisApp() {
     var tokens = url.split("/");
     var id = tokens[tokens.length - 1];
     //capitalize first letter if more than 4 characters
+    let formatterId;
     if (id.length > 4) {
-        id = id.charAt(0).toUpperCase() + id.slice(1);
+        formatterId = id.charAt(0).toUpperCase() + id.slice(1);
     } else {
-        id = id.toUpperCase();
+        formatterId = id.toUpperCase();
     }
 
     useEffect(() => {
-        setQuestions([
-            {
-                id: 1,
-                question: "Apakah ini pertanyaan 1?",
-                options: ["Ya", "Tidak"],
-                answer: 0,
-            },
-            {
-                id: 2,
-                question: "Apakah ini  pertanyaan 2?",
-                options: ["Ya", "Tidak 2"],
-                answer: 1,
-            },
-        ]);
+        async function fetchQuiz() {
+            const response = await fetch("/api/kuis/" + id);
+            const data = await response.json()
+            setQuestions(data);
+        }
+        fetchQuiz()
     }, []);
 
     function handleAnswer(index) {
         setSelected(index);
-        const newAnswers = [...answers];
+        const newAnswers = [...answers];    
         newAnswers[current] = index;
         setAnswers(newAnswers);
     }
@@ -65,19 +58,39 @@ function KuisApp() {
     function calculateScore() {
         let score = 0;
         for (let i = 0; i < questions.length; i++) {
-            if (answers[i] === questions[i].answer) {
+            if (answers[i] === questions[i].jawaban_id) {
                 score++;
             }
+        }
+        if (finished) {
+            sendScore(questions[0].kategori_id, ((score / questions.length) * 100))
         }
         //return score in percentage
         return (score / questions.length) * 100;
     }
 
+    function sendScore(kategori_id, skor) {
+
+        fetch('/api/submitresult', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                userId: window.user_id,
+                kategori_id: kategori_id,
+                skor: Math.floor(skor)
+            })
+        })
+        .then(response => response.json())
+        .then(data => console.log(data));
+    }
+    
     const finishDiv = (
         <div>
             <h2>Finished</h2>
             <h2>{"Nilai anda : " + calculateScore()}</h2>
-            <a href="kuis">
+            <a href="/kuis">
                 <button
                     style={{
                         backgroundColor: "orange",
@@ -110,7 +123,7 @@ function KuisApp() {
                     boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)",
                 }}
             >
-                <h1>Kuis {id}</h1>
+                <h1>Kuis {formatterId}</h1>
                 {finished ? finishDiv : null}
                 <div
                     style={{
@@ -118,25 +131,25 @@ function KuisApp() {
                     }}
                 >
                     <h3>{"Question " + (current + 1)}</h3>
-                    <h2>{questions[current].question}</h2>
+                    <h2>{questions[current].pertanyaan}</h2>
                     <div>
-                        {questions[current].options.map((option, index) => (
+                        {questions[current].options.map((option) => (
                             <div
-                                key={index}
+                                key={"opsi" + option.id}
                                 style={{
                                     backgroundColor:
-                                        selected === index ? "green" : "white",
+                                        selected === option.id ? "green" : "white",
                                     padding: "5px",
                                     borderRadius: "5px",
                                     marginBottom: "5px",
                                     transitionDuration: "0.3s",
                                     color:
-                                        selected === index ? "white" : "black",
+                                        selected === option.id ? "white" : "black",
                                 }}
-                                onClick={handleAnswer.bind(this, index)}
+                                onClick={handleAnswer.bind(this, option.id)}
                             >
-                                <label htmlFor={"option" + index}>
-                                    {option}
+                                <label htmlFor={"option" + option.id}  key={"label" + option.id}>
+                                    {option.opsi}
                                 </label>
                             </div>
                         ))}
@@ -156,6 +169,7 @@ function KuisApp() {
                                     borderRadius: "5px",
                                     marginBottom: "5px",
                                     transitionDuration: "0.3s",
+                                    display: !finished && current != 0 ? "block" : "none"
                                 }}
                                 onClick={handlePrev}
                             >

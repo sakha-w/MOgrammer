@@ -49,17 +49,17 @@
           <div class="col-md-4">
             <div class="card mb-5 mb-md-2 h-100">
               <div class="card-body px-4 py-6 py-md-5 py-lg-6">
-                <img src="assets/img/gallery/iconJAVA.png" width="100" height="100" style="display:block; margin:auto;" />
+                <img src="{{asset ('assets/img/gallery/iconJAVA.pn')}}g" width="100" height="100" style="display:block; margin:auto;" />
                 <p class="text-muted mb-2 my-md-3">Pelajari dasar-dasar pemrograman Java dan mulai dari nol.</p>
                 <hr class="border border-1" />
-                <div class="d-grid"> <a class="btn btn-lg btn-primary" href="/tutorialJava">Learn Java</a></div>
+                <div class="d-grid"> <a class="btn btn-lg btn-primary" href="/java">Learn Java</a></div>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card mb-5 mb-md-2 h-100">
               <div class="card-body px-4 py-6 py-md-5 py-lg-6">
-                <img src="assets/img/gallery/iconPHP.png" width="200" height="100" style="display:block; margin:auto;" />
+                <img src="{{asset ('assets/img/gallery/iconPHP.png')}}" width="200" height="100" style="display:block; margin:auto;" />
                 <p class="text-muted mb-2 my-md-3">Pelajari dasar pemrograman PHP agar kamu paham cara coding di PHP.</p>
                 <hr class="border border-1" />
                 <div class="d-grid"><a class="btn btn-lg btn-secondary" href="/php">Learn PHP</a></div>
@@ -69,17 +69,17 @@
           <div class="col-md-4">
             <div class="card mb-5 mb-md-2 h-100">
               <div class="card-body px-4 py-6 py-md-5 py-lg-6">
-                <img src="assets/img/gallery/iconHTML.png" width="100" height="100" style="display:block; margin:auto;" />
+                <img src="{{asset ('assets/img/gallery/iconHTML.pn')}}g" width="100" height="100" style="display:block; margin:auto;" />
                 <p class="text-muted mb-2 my-md-3">Pelajari dasar-dasar HTML untuk membuat website dari awal.</p>
                 <hr class="border border-1" />
-                <div class="d-grid"> <a class="btn btn-lg btn-primary" href="html">Learn HTML</a></div>
+                <div class="d-grid"> <a class="btn btn-lg btn-primary" href="/html">Learn HTML</a></div>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card mb-5 mb-md-2 h-100">
               <div class="card-body px-4 py-6 py-md-5 py-lg-6">
-                <img src="assets/img/gallery/iconCSS.png" width="100" height="100" style="display:block; margin:auto;" />
+                <img src="{{asset ('assets/img/gallery/iconCSS.png')}}" width="100" height="100" style="display:block; margin:auto;" />
                 <p class="text-muted mb-2 my-md-3">Di tutorial kali ini, kita akan belajar dasar-dasar CSS dari awal hingga bisa membuat style web yang sangat menarik tentunya.</p>
                 <hr class="border border-1" />
                 <div class="d-grid"> <a class="btn btn-lg btn-primary" href="css">Learn Css</a></div>
@@ -89,7 +89,7 @@
           <div class="col-md-4">
             <div class="card mb-5 mb-md-2 h-100">
               <div class="card-body px-4 py-6 py-md-5 py-lg-6">
-                <img src="assets/img/gallery/iconPhyton.png" width="100" height="100" style="display:block; margin:auto;" />
+                <img src="{{asset ('assets/img/gallery/iconPhyton.')}}png" width="100" height="100" style="display:block; margin:auto;" />
                 <p class="text-muted mb-2 my-md-3">Tutorial belajar Python dari dasar. Python adalah bahasa tingkat tinggi untuk backend, machine learning, AI, dll.</p>
                 <hr class="border border-1" />
                 <div class="d-grid"> <a class="btn btn-lg btn-primary" href="python">Learn Python</a></div>
@@ -99,7 +99,7 @@
           <div class="col-md-4">
             <div class="card mb-5 mb-md-2 h-100">
               <div class="card-body px-4 py-6 py-md-5 py-lg-6">
-                <img src="assets/img/gallery/iconJS.png" width="100" height="100" style="display:block; margin:auto;" />
+                <img src="{{asset ('assets/img/gallery/iconJS.png"')}} width="100" height="100" style="display:block; margin:auto;" />
                 <p class="text-muted mb-2 my-md-3">Javascript adalah bahasa pemrograman yang bisa digunakan untuk membuat aplikasi web, server, desktop, dsb.</p>
                 <hr class="border border-1" />
                 <div class="d-grid"> <a class="btn btn-lg btn-primary" href="javascript">Learn JavaScript</a></div>

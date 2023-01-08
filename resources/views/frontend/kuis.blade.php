@@ -54,7 +54,7 @@
                                 <div class="col-lg-7" style="border-radius: 27px; padding-top: 32px;">
                                     <div class="info"><span style="font-size: 40px;font-family: 'Roboto' Francois', Sans-serif;">Kuis Java</span></div>
                                     <div class="info" style="padding-top: 0px;"><span class="text-muted" style="font-size: 15px;">15 soal</span></div>
-                                    <div class="d-lg-flex justify-content-lg-end info px-5 py-3"><button class="btn btn-outline-primary btn-sm text-end d-lg-flex justify-content-lg-end" type="button" style="border-radius: 30px;"><a href="kuis/java">Mulai</button></a></div>
+                                    <div class="d-lg-flex justify-content-lg-end info px-5 py-3"><button class="btn btn-outline-primary btn-sm text-end d-lg-flex justify-content-lg-end" type="button" style="border-radius: 30px;"><a href="/kuis/java">Mulai</button></a></div>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                                 <div class="col-lg-7" style="border-radius: 27px; padding-top: 32px;">
                                     <div class="info"><span style="font-size: 40px;font-family: 'Roboto' Francois', Sans-serif;">Kuis HTML</span></div>
                                     <div class="info" style="padding-top: 0px;"><span class="text-muted" style="font-size: 15px;">15 soal</span></div>
-                                    <div class="d-lg-flex justify-content-lg-end info px-5 py-3"><button class="btn btn-outline-primary btn-sm text-end d-lg-flex justify-content-lg-end" type="button" style="border-radius: 30px;">Mulai</button></div>
+                                    <div class="d-lg-flex justify-content-lg-end info px-5 py-3"><button class="btn btn-outline-primary btn-sm text-end d-lg-flex justify-content-lg-end" type="button" style="border-radius: 30px;"><a href="/kuis/html">Mulai</button></div>
                                 </div>
                             </div>
                         </div>
