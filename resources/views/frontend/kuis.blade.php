@@ -39,18 +39,8 @@
 
 
   <body>
-
-    <!-- ===============================================-->
-    <!--    Main Content-->
-    <!-- ===============================================-->
     <main class="main" id="top">
-
-
-      <!-- ============================================-->
-      <!-- <section> begin ============================-->
       @include('frontend.include.begin')
-      <!-- <section> close ============================-->
-      <!-- ============================================-->
 
 
       @include('frontend.include.header')
@@ -60,18 +50,18 @@
                     <div class="col-md-9">
                         <div class="card block-content my-5" style="border-radius: 15px; ">
                             <div class="row">
-                                <div class="col-lg-5"><img class="rounded img-fluid d-lg-flex px-6 py-1" src="{{asset ('assets/img/Java.png')}}"></div>
+                                <div class="col-lg-5"><img class="rounded img-fluid d-lg-flex px-6 py-1" src="{{asset ('assets/img/gallery/Java.png')}}"></div>
                                 <div class="col-lg-7" style="border-radius: 27px; padding-top: 32px;">
                                     <div class="info"><span style="font-size: 40px;font-family: 'Roboto' Francois', Sans-serif;">Kuis Java</span></div>
                                     <div class="info" style="padding-top: 0px;"><span class="text-muted" style="font-size: 15px;">15 soal</span></div>
-                                    <div class="d-lg-flex justify-content-lg-end info px-5 py-3"><button class="btn btn-outline-primary btn-sm text-end d-lg-flex justify-content-lg-end" type="button" style="border-radius: 30px;">Mulai</button></div>
+                                    <div class="d-lg-flex justify-content-lg-end info px-5 py-3"><button class="btn btn-outline-primary btn-sm text-end d-lg-flex justify-content-lg-end" type="button" style="border-radius: 30px;"><a href="kuis/java">Mulai</button></a></div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="card block-content my-5" style="border-radius: 15px; ">
                             <div class="row">
-                                <div class="col-lg-5"><img class="rounded img-fluid d-lg-flex flex-fill px-6 py-3" src="{{asset ('assets/img/HTML.png')}}"></div>
+                                <div class="col-lg-5"><img class="rounded img-fluid d-lg-flex flex-fill px-6 py-3" src="{{asset ('assets/img/gallery/HTML.png')}}"></div>
                                 <div class="col-lg-7" style="border-radius: 27px; padding-top: 32px;">
                                     <div class="info"><span style="font-size: 40px;font-family: 'Roboto' Francois', Sans-serif;">Kuis HTML</span></div>
                                     <div class="info" style="padding-top: 0px;"><span class="text-muted" style="font-size: 15px;">15 soal</span></div>
@@ -82,7 +72,7 @@
 
                         <div class="card block-content my-5" style="border-radius: 15px; ">
                             <div class="row">
-                                <div class="col-lg-5"><img class="rounded img-fluid d-lg-flex flex-fill px-6 py-4" src="{{asset ('assets/img/PHP.png')}}"></div>
+                                <div class="col-lg-5"><img class="rounded img-fluid d-lg-flex flex-fill px-6 py-4" src="{{asset ('assets/img/gallery/PHP.png')}}"></div>
                                 <div class="col-lg-7" style="border-radius: 27px; padding-top: 32px;">
                                     <div class="info"><span style="font-size: 40px;font-family: 'Roboto' Francois', Sans-serif;">Kuis PHP</span></div>
                                     <div class="info" style="padding-top: 0px;"><span class="text-muted" style="font-size: 15px;">15 soal</span></div>
@@ -93,7 +83,7 @@
 
                         <div class="card block-content my-5" style="border-radius: 15px; ">
                             <div class="row">
-                                <div class="col-lg-5"><img class="rounded img-fluid d-lg-flex flex-fill" src="{{asset ('assets/img/image4.jpg')}}"></div>
+                                <div class="col-lg-5"><img class="rounded img-fluid d-lg-flex flex-fill" src="{{asset ('assets/img/gallery/image4.jpg')}}"></div>
                                 <div class="col-lg-7" style="border-radius: 27px;">
                                 <div class="info"><span style="font-size: 40px;font-family: 'Roboto' Francois', Sans-serif;">Kuis JavaScript</span></div>
                                     <div class="info" style="padding-top: 0px;"><span class="text-muted" style="font-size: 15px;">15 soal</span></div>
@@ -102,42 +92,9 @@
                             </div>
                         </div>
 
-                        <!-- <div class="block-content" style="margin-top: 47px;border-radius: 15px;">
-                            <div class="row">
-                                <div class="col-lg-5"><img class="rounded img-fluid d-lg-flex flex-fill" src="assets/img/image4.jpg"></div>
-                                <div class="col-lg-7" style="border-radius: 27px;">
-                                    <h1 style="border-bottom-width: 0px;border-bottom-style: solid;font-size: 32px;font-family: 'Jacques Francois', serif;margin-bottom: 0px;">Kuis</h1>
-                                    <div class="info"><span style="font-size: 32px;font-family: 'Jacques Francois', serif;">HTML</span></div>
-                                    <div class="info" style="padding-top: 15px;"><span class="text-muted" style="font-size: 15px;padding-top: 15px;">15 soal</span></div>
-                                    <div class="d-lg-flex justify-content-lg-end info"><button class="btn btn-outline-primary btn-sm text-end d-lg-flex justify-content-lg-end" type="button" style="border-radius: 27px;">Mulai</button></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="block-content" style="margin-top: 47px;border-radius: 15px;">
-                            <div class="row">
-                                <div class="col-lg-5"><img class="rounded img-fluid d-lg-flex flex-fill" src="assets/img/image4.jpg"></div>
-                                <div class="col-lg-7" style="border-radius: 27px;">
-                                    <h1 style="border-bottom-width: 0px;border-bottom-style: solid;font-size: 32px;font-family: 'Jacques Francois', serif;margin-bottom: 0px;">Kuis</h1>
-                                    <div class="info"><span style="font-size: 32px;font-family: 'Jacques Francois', serif;">PHP</span></div>
-                                    <div class="info" style="padding-top: 15px;"><span class="text-muted" style="font-size: 15px;">15 soal</span></div>
-                                    <div class="d-lg-flex justify-content-lg-end info"><button class="btn btn-outline-primary btn-sm text-end d-lg-flex justify-content-lg-end" type="button" style="border-radius: 27px;">Mulai</button></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="block-content" style="margin-top: 47px;border-radius: 15px;">
-                            <div class="row">
-                                <div class="col-lg-5"><img class="rounded img-fluid d-lg-flex flex-fill" src="assets/img/image4.jpg"></div>
-                                <div class="col-lg-7" style="border-radius: 27px;">
-                                    <h1 style="border-bottom-width: 0px;border-bottom-style: solid;font-size: 32px;font-family: 'Jacques Francois', serif;margin-bottom: 0px;">Kuis</h1>
-                                    <div class="info"><span style="font-size: 32px;font-family: 'Jacques Francois', serif;"><strong>GOLANG</strong><a href="#"></a></span></div>
-                                    <div class="info" style="padding-top: 15px;"><span class="text-muted" style="font-size: 15px;">15 soal</span></div>
-                                    <div class="d-lg-flex justify-content-lg-end info"><button class="btn btn-outline-primary btn-sm text-end d-lg-flex justify-content-lg-end" type="button" style="border-radius: 27px;">Mulai</button></div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <div class="clean-blog-post">
+                        <!-- <div class="clean-blog-post">
                             <div class="products"></div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

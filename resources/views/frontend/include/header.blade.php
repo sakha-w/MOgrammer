@@ -4,14 +4,13 @@
           <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
               <li class="nav-item px-2"><a class="nav-link active" aria-current="page" href="homepage">Beranda</a></li>
-              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="pricing">Tutorial</a></li>
+              <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="tutorial">Tutorial</a></li>
               <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="forum">Forum</a></li>
               <li class="nav-item px-2"><a class="nav-link" aria-current="page" href="kuis">Kuis</a></li>
             </ul>
             @if(!Auth::check())
               <a class="btn btn-primary order-1 order-lg-0" href="{{route('register')}}">Daftar</a>
             @else
-            
             <div class="dropdown">
               <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               <img class="card-img-top" style="width: 40px;" src="{{ asset('assets/img/gallery/profile.png')}}" alt="courses" />  

@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\ForumController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\KuisController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -24,42 +24,50 @@ Route::get('/landing', function () {
     return view('home');
 })->middleware(['auth', 'verified'])->name('landing');
 
-// Route::middleware('auth')->group(function () {
-//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-// });
-
 Route::get('/homepage', function(){
     return view('frontend.landing');
+});
+
+Route::get('/tutorial', function(){
+    return view('frontend.tutorial');
 });
 
 Route::get('/tutorialJava', function(){
     return view('tutorial.java');
 });
+
 Route::get('/tutorialJavaScript', function(){
     return view('tutorial.javascript');
 });
+
 Route::get('/tutorialCss', function(){
     return view('tutorial.css');
 });
+
 Route::get('/tutorialPhp', function(){
     return view('tutorial.php');
 });
 
+Route::middleware('auth')->group(function () {
+    Route::get('/kuis/{tipe}', function($tipe){
+        return view('frontend.kuisapp');
+    });
+});
+Route::get('/kuis/{category}', [KuisController::class, 'getQuestionsByCategory']);
+
+
 Route::get('/webdev', function(){
     return view('frontend.webdev');
 });
+
 Route::get('/forum', function(){
     return view('frontend.forum');
 });
+
 Route::get('/kuis', function(){
     return view('frontend.kuis');
 });
 
-// require __DIR__.'/auth.php';
-
 Auth::routes();
-
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
