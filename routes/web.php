@@ -3,6 +3,7 @@
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -89,8 +90,21 @@ Route::get('/pertanyaanDashboard', function(){
 })->name('pertanyaanDashboard');
 
 Route::get('/homepageDashboard', function(){
-    return view('frontend.admin.dashboard');
-})->name('homepageDashboard');
+    return view('frontend.landing');
+})->name('homepage');
+
+//user
+Route::get('user', [UserController::class, 'index'])->name('user');
+
+Route::get('userRegistration', [UserController::class, 'create'])->name('userRegistration');
+
+Route::post('userStore', [UserController::class, 'store'])->name('userStore');
+
+Route::get('userView/{user}', [UserController::class, 'show'])->name('userView');
+
+route::get('/getAllUsers', [UserController::class, 'getAllUsers'])->middleware(['auth', 'verified'])->name('getAllUsers');
+
+Route::post('userUpdate', [UserController::class, 'update'])->name('userUpdate'); 
 
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');

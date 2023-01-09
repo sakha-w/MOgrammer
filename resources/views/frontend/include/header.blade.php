@@ -9,7 +9,7 @@
               <li class="nav-item px-2 btn-outline-primary"><a class="nav-link" aria-current="page" href="kuis">Kuis</a></li>
               @auth
                 @if (Auth::user()->is_admin)
-                <li class="nav-item px-2 btn-outline-primary"><a class="nav-link" aria-current="page" href="dashboard  ">Admin</a></li>    
+                <li class="nav-item px-2 btn-outline-primary"><a class="nav-link" aria-current="page" href="dashboard">Admin</a></li>    
                 @endif
             @endauth
             </ul>

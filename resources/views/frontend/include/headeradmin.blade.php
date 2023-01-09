@@ -4,7 +4,7 @@
           <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
               <li class="nav-item px-2 btn-outline-primary"><a class="nav-link active" aria-current="page" href="homepageDashboard">Beranda</a></li>
-              <li class="nav-item px-2 btn-outline-primary"><a class="nav-link active" aria-current="page" href="userDashboard">User</a></li>
+              <li class="nav-item px-2 btn-outline-primary"><a class="nav-link active" aria-current="page" href="user">User</a></li>
               <li class="nav-item px-2 btn-outline-primary"><a class="nav-link" aria-current="page" href="kategoriDashboard">Kategori</a></li>
               <li class="nav-item px-2 btn-outline-primary"><a class="nav-link" aria-current="page" href="pertanyaanDashboard">Pertanyaan</a></li>
             <form class="d-flex my-3 d-block d-lg-none">

@@ -9,6 +9,9 @@ class Category extends Model
 {
     use HasFactory;
 
-    protected $table ='categories';
-    
+    protected $table = [
+        'name',
+        'email',
+        'password',
+    ];
 }

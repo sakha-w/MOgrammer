@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>little squirrel | Landing, Responsive &amp; Business Templatee</title>
+    <title>Homepage</title>
 
 
     <!-- ===============================================-->
@@ -56,7 +56,8 @@
             <div class="col-md-5 col-lg-6 order-0 order-md-1 text-end"><img class="pt-7 pt-md-0 w-100" src="{{ asset('assets/img/gallery/hero-header.png')}}" width="470" alt="hero-header" /></div>
             <div class="col-md-7 col-lg-6 text-md-start text-center py-6">
               <h3 class="fw-bold font-sans-serif">MOgrammer</h3>
-              <h1 class="fs-6 fs-xl-7 mb-2">Kejar mimpimu bersama kami</h1><a class="btn btn-primary me-4" href="#!" role="button">Let's GO!</a>
+              <h1 class="fs-6 fs-xl-7 mb-2">Kejar mimpimu bersama kami</h1>
+              <a class="btn btn-primary me-4" href="tutorial" role="button">Let's GO!</a>
             </div>
           </div>
         </div>

@@ -93,7 +93,7 @@
 
                         <div class="card block-content my-5" style="border-radius: 15px; ">
                             <div class="row">
-                                <div class="col-lg-5"><img class="rounded img-fluid d-lg-flex flex-fill" src="{{asset ('assets/img/image4.jpg')}}"></div>
+                                <div class="col-lg-5"><img class="img-fluid" alt="Responsive image max-width: 20%; height: 50%;" src="{{asset ('assets/img/javascript.png')}}"></div>
                                 <div class="col-lg-7" style="border-radius: 27px;">
                                 <div class="info"><span style="font-size: 40px;font-family: 'Roboto' Francois', Sans-serif;">Kuis JavaScript</span></div>
                                     <div class="info" style="padding-top: 0px;"><span class="text-muted" style="font-size: 15px;">15 soal</span></div>

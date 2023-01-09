@@ -14,6 +14,17 @@ class QuizController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function index(){
+        return view('frontend.admin.pertanyaan');
+    }
+
+    public function create()
+    {
+    $categories = Category::all();
+     return view('questions.create', compact('categories'));
+}
+
         
 function getQuestionsByCategory($category) {
     $questions = Question::join('categories', 'questions.kategori_id', '=', 'categories.id')

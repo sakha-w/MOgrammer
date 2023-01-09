@@ -5,17 +5,26 @@
         "build": "vite build"
     },
     "devDependencies": {
-        "@popperjs/core": "^2.11.6",
         "@tailwindcss/forms": "^0.5.2",
         "alpinejs": "^3.4.2",
-        "autoprefixer": "^10.4.2",
         "axios": "^1.1.2",
-        "bootstrap": "^5.2.3",
         "laravel-vite-plugin": "^0.7.2",
         "lodash": "^4.17.19",
         "postcss": "^8.4.6",
+        "resolve-url-loader": "^5.0.0",
         "sass": "^1.56.1",
         "tailwindcss": "^3.1.0",
         "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^6.2.1",
+        "autoprefixer": "^10.4.5",
+        "cross-env": "^7.0.3",
+        "i": "^0.3.7",
+        "icheck-bootstrap": "^3.0.1",
+        "jquery": "^3.6.0",
+        "npm": "^9.2.0",
+        "overlayscrollbars": "^2.0.3",
+        "popper.js": "^1.16.1"
     }
 }
