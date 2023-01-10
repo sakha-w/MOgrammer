@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MOgrammer</title>
+  <title>Tutorial</title>
 
   <!--    Favicons-->
   <!-- ===============================================-->
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/favicons/apple-touch-icon.png') }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/favicons/favicon-32x32.png') }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/img/favicons/favicon-16x16.png') }}">
+  <link rel="icon" type="image/png" sizes="" href="{{ asset('assets/img/gallery/logoMogrammer1.png') }}">
   <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicons/favicon.icon') }}">
   <link rel="manifest" href="{{ asset('assets/img/favicons/manifest.json') }}">
   <meta name="msapplication-TileImage" content="{{ asset('assets/img/favicons/mstile-150x150.png') }}">
@@ -49,7 +46,7 @@
           <div class="col-md-4">
             <div class="card mb-5 mb-md-2 h-100">
               <div class="card-body px-4 py-6 py-md-5 py-lg-6">
-                <img src="{{asset ('assets/img/gallery/iconJAVA.pn')}}g" width="100" height="100" style="display:block; margin:auto;" />
+                <img src="{{asset ('assets/img/gallery/iconJAVA.png')}}" width="100" height="100" style="display:block; margin:auto;" />
                 <p class="text-muted mb-2 my-md-3">Pelajari dasar-dasar pemrograman Java dan mulai dari nol.</p>
                 <hr class="border border-1" />
                 <div class="d-grid"> <a class="btn btn-lg btn-primary" href="/java">Learn Java</a></div>
@@ -69,7 +66,7 @@
           <div class="col-md-4">
             <div class="card mb-5 mb-md-2 h-100">
               <div class="card-body px-4 py-6 py-md-5 py-lg-6">
-                <img src="{{asset ('assets/img/gallery/iconHTML.pn')}}g" width="100" height="100" style="display:block; margin:auto;" />
+                <img src="{{asset ('assets/img/gallery/iconHTML.png')}}" width="100" height="100" style="display:block; margin:auto;" />
                 <p class="text-muted mb-2 my-md-3">Pelajari dasar-dasar HTML untuk membuat website dari awal.</p>
                 <hr class="border border-1" />
                 <div class="d-grid"> <a class="btn btn-lg btn-primary" href="/html">Learn HTML</a></div>
@@ -89,7 +86,7 @@
           <div class="col-md-4">
             <div class="card mb-5 mb-md-2 h-100">
               <div class="card-body px-4 py-6 py-md-5 py-lg-6">
-                <img src="{{asset ('assets/img/gallery/iconPhyton.')}}png" width="100" height="100" style="display:block; margin:auto;" />
+                <img src="{{asset ('assets/img/gallery/iconPhyton.png')}}" width="100" height="100" style="display:block; margin:auto;" />
                 <p class="text-muted mb-2 my-md-3">Tutorial belajar Python dari dasar. Python adalah bahasa tingkat tinggi untuk backend, machine learning, AI, dll.</p>
                 <hr class="border border-1" />
                 <div class="d-grid"> <a class="btn btn-lg btn-primary" href="python">Learn Python</a></div>
@@ -99,7 +96,7 @@
           <div class="col-md-4">
             <div class="card mb-5 mb-md-2 h-100">
               <div class="card-body px-4 py-6 py-md-5 py-lg-6">
-                <img src="{{asset ('assets/img/gallery/iconJS.png"')}} width="100" height="100" style="display:block; margin:auto;" />
+                <img src="{{asset ('assets/img/gallery/iconJS.png')}}" width="100" height="100" style="display:block; margin:auto;" />
                 <p class="text-muted mb-2 my-md-3">Javascript adalah bahasa pemrograman yang bisa digunakan untuk membuat aplikasi web, server, desktop, dsb.</p>
                 <hr class="border border-1" />
                 <div class="d-grid"> <a class="btn btn-lg btn-primary" href="javascript">Learn JavaScript</a></div>

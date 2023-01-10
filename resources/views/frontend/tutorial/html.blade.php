@@ -71,11 +71,8 @@
                             membuat halaman HTML sendiri.
                             Baiklah Mari kita mulai!</font>
                     </p>
-                    <br /><br /><br /><a
-                        href="https://news.detik.com/berita/d-6067765/cara-baru-baca-artikel-18-pindahkan-dulu-akun-detikid-jadi-mpc-ya"
-                        target="_blank">
-                        <img src="assets/img/gallery/detikcom.jpeg" alt="Banner Iklan detik.com" width="800"
-                            height="400" style="block; margin:auto;" /></a>
+                    <br /><br /><br /><a href="https://news.detik.com/berita/d-6067765/cara-baru-baca-artikel-18-pindahkan-dulu-akun-detikid-jadi-mpc-ya" target="_blank">
+                        <img src="assets/img/gallery/detikcom.jpeg" alt="Banner Iklan detik.com" width="800" height="400" style="block; margin:auto;" /></a>
                     <br /><br /><br /><br />
                     <h4><b>
                             <font size="6">Apa Itu HTML?</font>
@@ -108,8 +105,7 @@
                             agar dapat membentuk badan manusia,
                             hingga menjadi fondasi dasar tubuh manusia.</font>
                     </p>
-                    <img src="assets/img/gallery/tulangHTML.jpg" width="500" height="500"
-                        style="display:block; margin:auto;" />
+                    <img src="assets/img/gallery/tulangHTML.jpg" width="500" height="500" style="display:block; margin:auto;" />
                     <br /><br />
                     <p>
                         <font size="6">Dalam membuat sebuah halaman website yang baik dan menarik, HTML tidak sendirian.
@@ -181,15 +177,13 @@
                         </font>
                     </p>
                     <br />
-                    <img src="assets/img/gallery/VSCODE.png" width="750" height="350"
-                        style="display:block; margin:auto;" />
+                    <img src="assets/img/gallery/VSCODE.png" width="750" height="350" style="display:block; margin:auto;" />
                     <br /><br />
                     <p>
                         <font size="6"><b>2.Web browser,</b> akan kita gunakan untuk membuka dokumen HTML yang kita
                             buat,disini kita akan menggunakan <i>Google Chrome</i></font>
                     </p>
-                    <img src="assets/img/gallery/chrome.png" width="300" height="300"
-                        style="display:block; margin:auto;" />
+                    <img src="assets/img/gallery/chrome.png" width="300" height="300" style="display:block; margin:auto;" />
                     <br />
                     <center>
                         <h4><b>
@@ -206,8 +200,7 @@
                         <font size="6">Mari kita mulai dengan membuka teks editor, lalu tulislah kode berikut.</font>
                     </p>
                     <br />
-                    <img src="assets/img/gallery/VSCODE2.png" width="750" height="300"
-                        style="display:block; margin:auto;" />
+                    <img src="assets/img/gallery/VSCODE2.png" width="750" height="300" style="display:block; margin:auto;" />
                     <br />
                     <p>
                         <font size="6">Setelah itu, simpan dengan nama <b>helloworld.html</b>.</font>
@@ -218,8 +211,7 @@
                             tadi maka hasilnya akan seperti berikut:</b></font>
                     </p>
                     <br />
-                    <img src="assets/img/gallery/helloworld.png" width="950" height="250"
-                        style="display:block; margin:auto;" />
+                    <img src="assets/img/gallery/helloworld.png" width="950" height="250" style="display:block; margin:auto;" />
                     <br />
                     <p>
                         <font size="6">Selamat! 🎉 Kalian sudah berhasil membuat halaman web pertama dengan HTML.</b>
@@ -258,9 +250,7 @@
     <script src="{{ asset('vendors/fontawesome/all.min.js')}}"></script>
     <script src="{{ asset('assets/js/theme.js')}}"></script>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Rubik:wght@300;400;500;600;700;800&amp;display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Rubik:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
 </body>
 
 </html>

@@ -48,6 +48,14 @@ Route::get('/php', function(){
     return view('frontend.tutorial.php');
 });
 
+Route::get('/html', function(){
+    return view('frontend.tutorial.html');
+});
+
+Route::get('/python', function(){
+    return view('frontend.tutorial.python');
+});
+
 Route::middleware('auth')->group(function () {
     Route::get('/kuis/{tipe}', function($tipe){
         return view('frontend.kuisapp');

@@ -11,7 +11,7 @@
     @vite('resources/js/kuisapp.jsx')
 
 
-    <!--    Favicons-->
+    <!--Favicons-->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/favicons/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/favicons/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/img/favicons/favicon-16x16.png') }}">
@@ -24,11 +24,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
-    <!--    Stylesheets-->
+    <!--Stylesheets-->
     <!-- <link href="{{ asset('assets/css/theme.css') }}" rel="stylesheet" /> -->
 </head>
-
-
 <body>
 
     <form method="POST" action="{{ route('logout') }}">
@@ -40,8 +38,8 @@
         window.user_id = "{{Auth::user() ? Auth::user()->id : null}}";
     </script>
     <div id="kuisapp"></div>
-    
-    <!--    JavaScripts-->
+
+    <!--JavaScripts-->
     <script src="{{ asset('vendors/@popperjs/popper.min.js')}}"></script>
     <script src="{{ asset('vendors/bootstrap/bootstrap.min.js')}}"></script>
     <script src="{{ asset('vendors/is/is.min.js')}}"></script>

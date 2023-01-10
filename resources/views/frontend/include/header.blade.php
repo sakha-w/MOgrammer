@@ -25,18 +25,6 @@
               </ul>
             </div>
             @endif
-            <form class="d-flex my-3 d-block d-lg-none">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button class="btn btn-outline-primary" type="submit">Search</button>
-            </form>
-            <div class="dropdown d-none d-lg-block">
-              <button class="btn btn-outline-light ms-2" id="dropdownMenuButton1" type="submit" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-search text-800"></i></button>
-              <ul class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuButton1" style="top:55px">
-                <form>
-                  <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
-                </form>
-              </ul>
-            </div>
           </div>
         </div>
       </nav>

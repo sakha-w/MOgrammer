@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\Validator;
 class KuisController extends Controller
 {
     function getQuestionsByCategory($category) {
-        $questions = Question::join('categories', 'questions.kategori_id', '=', 'categories.id')
+        $questions = Question::select('questions.id', 'questions.pertanyaan', 'questions.jawaban_id', 'questions.kategori_id')->join('categories', 'questions.kategori_id', '=', 'categories.id')
             ->where('categories.namaKategori', $category)
             ->get();
     
         foreach ($questions as $question) {
             $options = Option::where('pertanyaan_id', $question->id)->get();
-            $question['options'] = $options;
+            $question['options'] = $options;    
         }
     
         return $questions;
