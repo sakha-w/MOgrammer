@@ -26,6 +26,10 @@ Route::get('/landing', function () {
 
 Route::get('/homepage', function(){
     return view('frontend.landing');
+})->name('homepage');
+
+Route::get('/tutorial', function(){
+    return view('frontend.tutorial');
 });
 
 Route::get('/tutorial', function(){
@@ -75,6 +79,7 @@ Route::get('/kuis', function(){
 Route::get('/tableUser', function(){
     return view('frontend.admin.user');
 });
+
 
 Auth::routes();
 
