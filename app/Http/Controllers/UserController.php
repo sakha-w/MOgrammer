@@ -12,11 +12,11 @@ use Illuminate\Support\Facades\DB;
 class userController extends Controller
 {
     public function index(){
-        return view('frontend.user.daftarPengguna');
+        return view('layouts.admin');
     }
 
     public function create(){
-        return view ('frontend.user.registrasi');
+        return view ('layout.admin');
         
     }
 
@@ -34,15 +34,15 @@ class userController extends Controller
         $user->update([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => $request->password,
+            'password' =>bcrypt($request->password),
+            'is_admin' => $request->is_admin,
         ]);
         return redirect()
-            ->route('user')
+            ->route('home')
             ->with('success', 'User updated successfully.');
 
         return redirect()->route('user');
     }
-    
 
      /**
      * Show the form for editing the specified resource.
@@ -54,7 +54,7 @@ class userController extends Controller
     public function edit($id)
     {
         $user = User::findorFail($id);
-        return view('profileEdit', compact('user'));
+        return view('userEdit', compact('user'));
     }
 
     public function store(Request $request)
@@ -64,15 +64,17 @@ class userController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'max:255'],
             'password' => ['required'],
+            'is_admin' => ['required', 2],
         ]);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'is_admin' => $request->is_admin,
         ]);
         return redirect()
-            ->route('user')
+            ->route('home')
             ->with('success', 'User created successfully.');
     }
     public function getAllUsers() {
@@ -81,6 +83,7 @@ class userController extends Controller
             'id as id',
             'name as name',
             'email as email',
+            'is_admin as is_admin'
         )
         ->orderBy('name', 'asc')
         ->get();
@@ -111,6 +114,7 @@ class userController extends Controller
     {
         $user = User::findorFail($id);
         $user->delete();
-        return redirect()->route('user');
+        return redirect()->route('home')
+        ->with('success','User deleted successfully');
     }
 }

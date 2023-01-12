@@ -37,7 +37,7 @@
                 </div>
                 <div class="input-div pass">
                     <div class="i">
-                        <i class="fas fa-lock"></i>
+                        <i class="fas fa-envelope"></i>
                     </div>
                     <div class="div">
                         <h5>Password</h5>

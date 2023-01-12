@@ -55,7 +55,7 @@
       <section class="bg-600">
     <div class="container">
         <div class="header">
-            <h1><b><font size="10">Mengenal apa itu java?: Tutorial belajar java dari dasar bagi pemula</font></b></h1>
+            <h1><b><font size="10">Mengenal apa itu java: Tutorial belajar java dari dasar bagi pemula</font></b></h1>
             <hr size="3px" width="100%" >
             <br/>
             <br/>
