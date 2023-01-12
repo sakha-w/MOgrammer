@@ -11,4 +11,10 @@ class Result extends Model
 
     protected $table ='results';
 
+    protected $fillable = [
+        'user_id',
+        'skor',
+        'categori_id'
+    ];
+
 }

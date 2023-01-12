@@ -1,11 +1,12 @@
+@extends('adminlte::page')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <x-slot name="header">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Registrasi User') }}
-            </h2>
-        </x-slot>
+@section('title', 'Dashboard')
+
+@section('content_header')
+<h1>Registrasi Pengguna</h1>
+@stop
+
+@section('content')
 
         <form method="POST" action="{{ url('userStore') }}">
                 @csrf
@@ -54,13 +55,23 @@
 
 
                 <!-- Submit -->
-                <x-primary-button class="mt-4">
+                <button class="mt-4">
                         {{ __('Submit') }}
-                </x-primary-button>
+                </button>
                 <!-- Reset -->
-                <x-primary-button class="mt-4">
+                <button class="mt-4">
                         {{ __('Reset') }}
-                </x-primary-button>
+                </button>
             </form>
         </div>
     </div>
+    <!-- ===============================================-->
+<!--    JavaScripts-->
+<!-- ===============================================-->
+<script src="{{ asset('vendors/@popperjs/popper.min.js')}}"></script>
+<script src="{{ asset('vendors/bootstrap/bootstrap.min.js')}}"></script>
+<script src="{{ asset('vendors/is/is.min.js')}}"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+<script src="{{ asset('vendors/fontawesome/all.min.js')}}"></script>
+<script src="{{ asset('assets/js/theme.js')}}"></script>
+@stop

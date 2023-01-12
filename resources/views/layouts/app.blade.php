@@ -12,9 +12,14 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <!-- <script type="text/javascript" src="assets/js/main2.js"></script> -->
+
+    <!-- Css -->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/style2.css"> -->
 </head>
 <body>
     <div id="app">

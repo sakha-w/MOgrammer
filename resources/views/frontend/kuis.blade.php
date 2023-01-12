@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>little squirrel | Landing, Responsive &amp; Business Templatee</title>
+    <title>MOgrammer</title>
 
 
     <!-- ===============================================-->

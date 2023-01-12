@@ -17,14 +17,8 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-free": "^6.2.1",
-        "autoprefixer": "^10.4.5",
-        "cross-env": "^7.0.3",
-        "i": "^0.3.7",
-        "icheck-bootstrap": "^3.0.1",
-        "jquery": "^3.6.0",
-        "npm": "^9.2.0",
-        "overlayscrollbars": "^2.0.3",
-        "popper.js": "^1.16.1"
+        "@vitejs/plugin-react": "^3.0.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
     }
 }

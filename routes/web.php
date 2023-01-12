@@ -36,6 +36,7 @@ Route::get('/homepage', function(){
     return view('frontend.landing');
 })->name('homepage');
 
+//tutorial
 Route::get('/tutorial', function(){
     return view('frontend.tutorial');
 });
@@ -94,7 +95,7 @@ Route::get('/homepageDashboard', function(){
 })->name('homepage');
 
 //user
-Route::get('user', [UserController::class, 'index'])->name('user');
+Route::get('user', [UserController::class, 'index'])->name('home');
 
 Route::get('userRegistration', [UserController::class, 'create'])->name('userRegistration');
 
@@ -104,10 +105,21 @@ Route::get('userView/{user}', [UserController::class, 'show'])->name('userView')
 
 route::get('/getAllUsers', [UserController::class, 'getAllUsers'])->middleware(['auth', 'verified'])->name('getAllUsers');
 
-Route::post('userUpdate', [UserController::class, 'update'])->name('userUpdate'); 
+Route::post('userUpdate/{id}', [UserController::class, 'update'])->name('userUpdate'); 
+
 
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+
+
+//Quiz
+Route::middleware('auth')->group(function () {
+    Route::get('/kuis/{tipe}', function($tipe){
+        return view('frontend.kuisapp');
+    });
+});
+Route::get('/kuis/{category}', [KuisController::class, 'getQuestionsByCategory']);
+
 
 // require __DIR__.'/auth.php';
 

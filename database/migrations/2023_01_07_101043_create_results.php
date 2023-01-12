@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('results', function (Blueprint $table) {
             $table->id();
             $table->foreignId('userId');
-            $table->float('skor',4,2);
+            $table->integer('skor');
             $table->timestamps();
         });
     }
