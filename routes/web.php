@@ -107,6 +107,8 @@ route::get('/getAllUsers', [UserController::class, 'getAllUsers'])->middleware([
 
 Route::post('userUpdate/{id}', [UserController::class, 'update'])->name('userUpdate'); 
 
+Route::post('userDelete/{id}', [UserController::class, 'destroy'])->name('userDelete'); 
+
 
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');

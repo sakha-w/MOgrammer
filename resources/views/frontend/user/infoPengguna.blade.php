@@ -16,6 +16,7 @@
         <form action="{{route('userUpdate', $user->id)}}" method="post">
             @csrf
 
+            
             <!-- ID  -->
             <div class="mt-4">
                 <x-input-label for="id" :value="__('ID')" />
@@ -43,7 +44,7 @@
                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
             </div>
 
-            <!-- Email -->
+            <!-- Role -->
              <div class="mt-4">
                 <x-input-label for="is_admin" :value="__('Is_Admin')" />
 
@@ -65,6 +66,9 @@
                         {{ __('Submit') }}
             </button>
                 <!-- Reset -->
+            </form>
+            <form action="{{route('userDelete', $user->id)}}" method="post">
+                @csrf
                 <button class="button">
                         {{ __('Delete') }}
                 </button>

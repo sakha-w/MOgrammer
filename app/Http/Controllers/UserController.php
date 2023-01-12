@@ -59,12 +59,11 @@ class userController extends Controller
 
     public function store(Request $request)
     {
-        // dd($request->all());
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'max:255'],
             'password' => ['required'],
-            'is_admin' => ['required', 2],
+            'is_admin' => ['required'],
         ]);
 
         $user = User::create([
@@ -114,7 +113,6 @@ class userController extends Controller
     {
         $user = User::findorFail($id);
         $user->delete();
-        return redirect()->route('home')
-        ->with('success','User deleted successfully');
+        return redirect()->route('home');
     }
 }

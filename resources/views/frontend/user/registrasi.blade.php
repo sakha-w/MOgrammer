@@ -8,9 +8,9 @@
 
 @section('content')
 
-        <form method="POST" action="{{ url('userStore') }}">
+<form method="POST" action="{{ url('userStore') }}">
                 @csrf
-
+                <input type="hidden" name="is_admin" value="0">
                 <!-- Name -->
                 <div class="mt-4">
                     <x-input-label for="name" :value="__('Name')" />
@@ -19,6 +19,7 @@
 
                     <x-input-error :messages="$errors->get('name')" class="mt-2" />
                 </div>
+
 
                 <!-- Email Address -->
                 <div class="mt-4">
@@ -52,19 +53,16 @@
                     <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                 </div>
 
-
-
                 <!-- Submit -->
-                <button class="mt-4">
+                <button type="submit" class="mt-4">
                         {{ __('Submit') }}
                 </button>
                 <!-- Reset -->
-                <button class="mt-4">
+                <button type="reset" class="mt-4">
                         {{ __('Reset') }}
                 </button>
             </form>
         </div>
-    </div>
     <!-- ===============================================-->
 <!--    JavaScripts-->
 <!-- ===============================================-->
