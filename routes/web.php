@@ -23,7 +23,7 @@ Route::get('/', function () {
 });
 
 Route::get('/landing', function () {
-    return view('home');
+    return view('homepage');
 })->middleware(['auth', 'verified'])->name('landing');
 
 // Route::middleware('auth')->group(function () {
@@ -41,7 +41,7 @@ Route::get('/tutorial', function(){
     return view('frontend.tutorial');
 });
 
-Route::get('/tutorialJava', function(){
+Route::get('/java', function(){
     return view('tutorial.java');
 });
 
@@ -53,13 +53,13 @@ Route::get('/python', function(){
     return view('tutorial.python');
 });
 
-Route::get('/tutorialJavaScript', function(){
+Route::get('/javascript', function(){
     return view('tutorial.javascript');
 });
-Route::get('/tutorialCss', function(){
+Route::get('/css', function(){
     return view('tutorial.css');
 });
-Route::get('/tutorialPhp', function(){
+Route::get('/php', function(){
     return view('tutorial.php');
 });
 
@@ -68,7 +68,7 @@ Route::get('/webdev', function(){
 });
 Route::get('/forum', function(){
     return view('frontend.forum');
-});
+})->middleware('auth');
 Route::get('/kuis', function(){
     return view('frontend.kuis');
 });
@@ -121,6 +121,22 @@ Route::middleware('auth')->group(function () {
     });
 });
 Route::get('/kuis/{category}', [KuisController::class, 'getQuestionsByCategory']);
+
+//Forum
+
+Route::get('adminforum', [ForumController::class, 'index'])->name('adminforum');
+
+Route::get('forumTambah', [ForumController::class, 'create'])->name('forumTambah');
+
+Route::post('forumStore', [ForumController::class, 'store'])->name('forumStore');
+
+Route::get('forumView/{id}', [ForumController::class, 'show'])->name('forumView');
+
+route::get('/getAllForums', [ForumController::class, 'getAllForums'])->middleware(['auth', 'verified'])->name('getAllForums');
+
+Route::post('forumUpdate', [ForumController::class, 'update'])->name('forumUpdate'); 
+
+Route::delete('forums/{id}', [ForumController::class, 'destroy'])->name('forumDelete');
 
 
 // require __DIR__.'/auth.php';

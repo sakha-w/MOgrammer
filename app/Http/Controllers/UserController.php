@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\DB;
 class userController extends Controller
 {
     public function index(){
-        return view('frontend.home');
+        return view('frontend.user.home');
     }
 
     public function create(){

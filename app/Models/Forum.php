@@ -10,6 +10,7 @@ class Forum extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id',
         'parent_comment',
         'name',
         'post',

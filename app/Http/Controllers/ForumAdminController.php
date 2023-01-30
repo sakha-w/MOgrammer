@@ -4,37 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Forum;
 use Carbon\Carbon;
-use Exception;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Yajra\DataTables\Facades\DataTables;
 
 class ForumController extends Controller
 {
-  public function saveComment(Request $request){
-    $request->validate([
-        'name' => 'required',
-        'msg' => 'required',
-    ]);
-
-    Forum::create([
-        'parent_comment' => $request->id,
-        'name' => $request->name,
-        'post' => $request->msg,
-        'date' => Carbon::now()
-    ]);
-
-    // return response()->json(['statusCode' => 200]);
-
-    return json_encode(array("statusCode"=>200));
-  }
-  
-  public function viewComment()
-  {
-        $forums  = Forum::all();
-        return response()->json($forums);
-  }
-
-
   public function index()
   {
     $forums = DB::table('forums')
@@ -113,14 +89,12 @@ class ForumController extends Controller
 
   public function destroy($id)
   {
-
-    // dd($id);
       try {
           $forum = Forum::findOrFail($id);
           $forum->delete();
-          return redirect()->route('adminforum')->with('success', 'Forum deleted successfully');
-      } catch (Exception $forum) {
-          return redirect()->route('adminforum')->with('error', 'Forum not found');
+          return redirect()->route('forum')->with('success', 'Forum deleted successfully');
+      } catch (ModelNotFoundException $forum) {
+          return redirect()->route('forum')->with('error', 'Forum not found');
       }
   }
   
